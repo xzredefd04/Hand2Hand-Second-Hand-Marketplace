@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETAILS | HANDS2HANDS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&family=Inter:wght@600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --secondary-text: #757575;
+            --border-color: #eeeeee;
+            --success-bg: #f0fff0;
+            --success-text: #2e7d32;
+            --transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg-color);
+            font-family: 'Kanit', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* --- HEADER --- */
+        header {
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+            background: white;
+        }
+
+        .logo {
+            font-family: 'Inter', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: 6px;
+            text-decoration: none;
+            color: black;
+            text-transform: uppercase;
+        }
+
+        /* --- SUCCESS BANNER --- */
+        .success-banner {
+            background: var(--success-bg);
+            color: var(--success-text);
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+            border-bottom: 1px solid #c8e6c9;
+        }
+
+        /* --- LAYOUT --- */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 50px;
+        }
+
+        /* --- PRODUCT VISUAL --- */
+        .image-box {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            background-color: #fcfcfc;
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ccc;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        /* --- DETAILS CONTENT --- */
+        .details-content h1 {
+            font-size: 26px;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .price-tag {
+            font-size: 22px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* ส่วนรายละเอียดสินค้า */
+        .description-section {
+            margin-bottom: 30px;
+            padding: 20px 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .description-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--secondary-text);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .description-text {
+            font-size: 15px;
+            color: #444;
+        }
+
+        /* การ์ดข้อมูลติดต่อ */
+        .contact-card {
+            background: #f9f9f9;
+            padding: 25px;
+            font-size: 14px;
+            border: 1px solid #f0f0f0;
+            margin-bottom: 30px;
+        }
+
+        .contact-card p {
+            margin-bottom: 8px;
+        }
+
+        /* --- BUTTON --- */
+        .home-btn {
+            width: 100%;
+            background: black;
+            color: white;
+            border: none;
+            padding: 20px;
+            font-family: 'Kanit', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .home-btn:hover {
+            background: #333;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 850px) {
+            .grid-layout { grid-template-columns: 1fr; gap: 30px; }
+            .image-box { aspect-ratio: 1 / 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="home.html" class="logo">HANDS2HANDS</a>
+    </header>
+
+    <div class="success-banner">✓ สินค้าตัวนี้กำลังออนไลน์บนระบบ HANDS2HANDS</div>
+
+    <main class="container grid-layout">
+        <section>
+            <div class="image-box">PRODUCT IMAGE</div>
+        </section>
+
+        <section class="details-content">
+            <h1>หนังสือติวเข้ม</h1>
+            <span class="price-tag">฿ 250.00</span>
+            
+            <div class="description-section">
+                <span class="description-title">รายละเอียดสินค้า</span>
+                <p class="description-text">
+                    หนังสือสรุปเนื้อหาสำคัญสำหรับการสอบ สภาพดี 95% ไม่มีรอยขีดเขียน 
+                    เนื้อหาครบถ้วน อ่านง่าย เหมาะสำหรับทบทวนก่อนสอบ
+                </p>
+            </div>
+            
+            <div class="contact-card">
+                <span class="description-title" style="margin-bottom: 15px;">ข้อมูลการติดต่อ</span>
+                <p><strong>สถานที่นัดรับ:</strong> ตึก 10 มหาวิทยาลัยหอการค้าไทย</p>
+                <p><strong>LINE:</strong> @NAME_ID</p>
+                <p><strong>Facebook:</strong> NAME_ACCOUNT</p>
+                <p><strong>Instagram:</strong> NAME_ACCOUNT</p>
+            </div>
+
+            <button class="home-btn" onclick="window.location.href='home.html'">กลับไปหน้าหลัก</button>
+        </section>
+    </main>
+
+</body>
+</html>

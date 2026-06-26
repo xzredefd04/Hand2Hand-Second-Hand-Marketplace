@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เข้าสู่ระบบ | HANDS2HANDS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&family=Inter:wght@600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --secondary-text: #757575;
+            --border-color: #eeeeee;
+            --transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: #fafafa;
+            font-family: 'Kanit', sans-serif;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-card {
+            background: white;
+            padding: 50px 40px;
+            width: 100%;
+            max-width: 400px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+        .logo {
+            font-family: 'Inter', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: 6px;
+            text-decoration: none;
+            color: black;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 40px;
+        }
+        .input-group { text-align: left; margin-bottom: 20px; }
+        .input-label { font-size: 11px; color: var(--secondary-text); margin-bottom: 8px; display: block; text-transform: uppercase; }
+        input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid var(--border-color);
+            font-family: 'Kanit', sans-serif;
+            outline: none;
+        }
+        input:focus { border-color: black; }
+        .submit-btn {
+            width: 100%;
+            background: black;
+            color: white;
+            border: none;
+            padding: 18px;
+            font-family: 'Kanit', sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-top: 10px;
+        }
+        .submit-btn:hover { background: #333; }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <a href="login.html" class="logo">HANDS2HANDS</a>
+        <form action="portal.html">
+            <div class="input-group">
+                <label class="input-label">รหัสนักศึกษา</label>
+                <input type="text" placeholder="กรอกรหัสนักศึกษา" required>
+            </div>
+            <div class="input-group">
+                <label class="input-label">รหัสผ่าน</label>
+                <input type="password" placeholder="กรอกรหัสผ่าน" required>
+            </div>
+            <button type="submit" class="submit-btn">เข้าสู่ระบบ</button>
+        </form>
+    </div>
+</body>
+</html>

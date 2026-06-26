@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เลือกบทบาท | HANDS2HANDS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&family=Inter:wght@600&display=swap" rel="stylesheet">
+    <style>
+        :root { --border-color: #eeeeee; --transition: 0.4s; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Kanit', sans-serif; text-align: center; }
+        header { padding: 30px; border-bottom: 1px solid var(--border-color); }
+        .logo { font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 600; letter-spacing: 6px; text-decoration: none; color: black; }
+        .role-container { max-width: 500px; margin: 100px auto; padding: 20px; display: flex; flex-direction: column; gap: 20px; }
+        .role-option {
+            padding: 40px;
+            border: 1px solid var(--border-color);
+            text-decoration: none;
+            color: black;
+            transition: var(--transition);
+        }
+        .role-option:hover { border-color: black; background: #fafafa; }
+        .role-title { display: block; font-size: 20px; font-weight: 500; margin-bottom: 10px; }
+        .role-desc { font-size: 13px; color: #757575; }
+    </style>
+</head>
+<body>
+    <header><a href="login.html" class="logo">HANDS2HANDS</a></header>
+    <div class="role-container">
+        <a href="home.html" class="role-option">
+            <span class="role-title">ผู้ซื้อ</span>
+            <span class="role-desc">เลือกชมสินค้า และหาของที่ต้องการ</span>
+        </a>
+        <a href="addproduct.html" class="role-option">
+            <span class="role-title">ผู้ขาย</span>
+            <span class="role-desc">ลงขายสินค้า และจัดการหน้าร้านของคุณ</span>
+        </a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANAGE | HANDS2HANDS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&family=Inter:wght@600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --secondary-text: #757575;
+            --border-color: #eeeeee;
+            --error-color: #d9534f;
+            --transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg-color);
+            font-family: 'Kanit', 'Inter', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+            background: white;
+        }
+
+        .logo {
+            font-family: 'Inter', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: 6px;
+            text-decoration: none;
+            color: black;
+            text-transform: uppercase;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 50px;
+        }
+
+        .section-title {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--secondary-text);
+            margin-bottom: 25px;
+            display: block;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .image-box {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            background-color: #fcfcfc;
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ccc;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        #display-name {
+            font-size: 26px; /* ปรับขนาดให้เท่าหน้า Success */
+            font-weight: 500;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        #display-price {
+            font-size: 22px; /* ปรับขนาดให้เท่าหน้า Success */
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        /* เพิ่มสไตล์การ์ดติดต่อให้เหมือนหน้า Success */
+        .contact-card {
+            background: #f9f9f9;
+            padding: 25px;
+            font-size: 14px;
+            border: 1px solid #f0f0f0;
+            margin-bottom: 25px;
+            margin-top: 20px;
+        }
+
+        .contact-card p {
+            margin-bottom: 8px;
+        }
+
+        .post-btn {
+            width: 100%;
+            background: black;
+            color: white;
+            border: none;
+            padding: 20px;
+            font-family: 'Kanit', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+        }
+
+        .post-btn:hover {
+            background: #333;
+        }
+
+        .action-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .action-link {
+            display: block;
+            padding: 15px 0;
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 13px;
+            border-bottom: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .action-link:hover {
+            padding-left: 8px;
+            color: var(--secondary-text);
+        }
+
+        @media (max-width: 850px) {
+            .grid-layout { grid-template-columns: 1fr; gap: 30px; }
+            .image-box { aspect-ratio: 1 / 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="home.html" class="logo">HANDS2HANDS</a>
+    </header>
+
+    <main class="container grid-layout">
+        <section>
+            <span class="section-title">รูปภาพสินค้า</span>
+            <div class="image-box">PRODUCT IMAGE</div>
+        </section>
+
+        <section>
+            <span class="section-title">รายละเอียดประกาศ</span>
+            <div style="margin-bottom:25px; border-bottom: 1px solid var(--border-color); padding-bottom: 20px;">
+                <h1 id="display-name">หนังสือติวเข้ม</h1>
+                <h2 id="display-price">฿ 250.00</h2>
+                
+                <span class="section-title" style="margin-bottom: 10px; margin-top: 20px;">รายละเอียดสินค้า</span>
+                <p id="display-description" style="font-size:15px; color: #444;">สภาพดี 95% ไม่มีตำหนิ เนื้อหาครบถ้วน อ่านง่าย</p>
+            </div>
+
+    
+
+            <button class="post-btn" id="btn-post">โพสต์สินค้าลงขาย</button>
+
+            <ul class="action-list">
+                <li><a href="addproduct.html" class="action-link">แก้ไขข้อมูลสินค้า</a></li>
+                <li><a href="#" class="action-link" style="color:var(--error-color);" id="btn-delete">ลบข้อมูลสินค้า (รีเซ็ต)</a></li>
+                <li><a href="portal.html" class="action-link">← กลับ</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('btn-post').addEventListener('click', function() {
+            if(confirm('คุณต้องการยืนยันการโพสต์สินค้าใช่หรือไม่?')) {
+                window.location.href = 'sucessdetail.html';
+            }
+        });
+
+        document.getElementById('btn-delete').addEventListener('click', function(e) {
+            e.preventDefault();
+            if(confirm('คุณต้องการลบข้อมูลและรีเซ็ตหน้านี้ใช่หรือไม่?')) {
+                document.getElementById('display-name').innerText = 'ไม่มีข้อมูลชื่อสินค้า';
+                document.getElementById('display-price').innerText = '฿ 0.00';
+                document.getElementById('display-description').innerText = 'ไม่มีข้อมูลคำอธิบายสินค้า';
+            }
+        });
+    </script>
+</body>
+</html>
